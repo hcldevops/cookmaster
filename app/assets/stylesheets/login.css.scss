@@ -1,0 +1,46 @@
+// Place all the styles related to the login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body { 
+ /* background: url('/assets/example/bg_suburb.jpg') no-repeat center center fixed; */
+ background-color: #2980B9;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+ width: 400px;
+  
+}
+.form-group.last {
+ margin-bottom:0px;
+}
+div.panel-body {
+  background-color: rgba(255, 255, 255, 1)
+}
+.vcenter {
+  position: absolute;
+  top: calc(50% - 250px);
+    width: 100%;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+
+ &:hover {
+  color: #fff;
+  text-decoration: none;
+}
+}
