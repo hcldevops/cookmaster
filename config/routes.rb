@@ -1,20 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
-  get 'sessions/show'
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   
   root 'login#home'
 
   match "/signup", to: "users#new",  via: 'get'
 
-  get 'users/new'
-
-  get 'login/about'
-
-  get 'login/support'
+  match "/login" , to: "sessions#new", via: 'get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
