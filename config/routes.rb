@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
+  get 'sessions/show'
+
   resources :users
   
   root 'login#home'

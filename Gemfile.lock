@@ -29,7 +29,10 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
+    bcrypt (3.1.7-x86-mingw32)
     bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
+    bcrypt-ruby (3.1.5-x86-mingw32)
       bcrypt (>= 3.1.3)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
@@ -110,12 +113,15 @@ GEM
       coffee-rails
     tzinfo (1.2.1)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2014.5)
+      tzinfo (>= 1.0.0)
     uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.1.2)
@@ -129,4 +135,5 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   turbolinks
+  tzinfo-data
   uglifier (>= 1.3.0)

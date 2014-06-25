@@ -8,6 +8,7 @@ gem 'mysql2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.1.1.1'
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 #bcrypt ruby for password
 gem 'bcrypt-ruby', '~> 3.1.2'
