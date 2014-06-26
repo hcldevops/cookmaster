@@ -23,8 +23,17 @@
 {
 	background-color:  #2ECC71;
 }
-
-.container-fluid
+.alert 
 {
-  padding-top: 80px;
+	width: 50%;
+	margin: auto;	
+	background-color:  #D2322D;
+	opacity: 1 ;
+}
+.alert p
+{
+	margin: auto;
+	font-size: 15px;
+	color: #fff;
+	padding-left: 30%;
 }
