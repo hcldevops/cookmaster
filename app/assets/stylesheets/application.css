@@ -23,13 +23,7 @@
 {
 	background-color:  #2ECC71;
 }
-.alert 
-{
-	width: 50%;
-	margin: auto;	
-	background-color:  #D2322D;
-	opacity: 1 ;
-}
+
 .alert p
 {
 	margin: auto;

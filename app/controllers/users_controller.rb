@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
    @user = User.new(user_params)
    if @user.save
+    
    	flash[:success] = "Announcement created!"
       redirect_to root_url
    else
@@ -14,8 +15,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  	render new
-    end
+  end
 
   private
   def user_params
