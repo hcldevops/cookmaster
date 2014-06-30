@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootbox.min
+//= require jquery.ui.all
 
 
 

@@ -16,6 +16,7 @@
  *= require custom
  *= require login
  *= require dashboard
+ *= require jquery.ui.all
 
 */
 
