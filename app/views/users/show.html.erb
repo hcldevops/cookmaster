@@ -1,14 +1,5 @@
 <% provide(:title , 'Dashboard') %>
- <script>
-$(function() {
-$( "#accordion" ).accordion({
-active: 2
-});
-$( "#accordion" ).accordion({
-collapsible: true
-});
-});
-</script>
+
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -23,7 +14,8 @@ collapsible: true
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Help</a></li>
-            <li><a href="#">Account</a></li>
+            <li><a href="#"></a></li>
+            <%= render :partial => 'userinfo' %>
             
           </ul>
           <form class="navbar-form navbar-right">

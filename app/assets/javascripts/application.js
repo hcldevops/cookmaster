@@ -19,3 +19,12 @@
 
 
 //= require_tree .
+
+$(function() {
+$( "#accordion" ).accordion({
+active: 2
+});
+$( "#accordion" ).accordion({
+collapsible: true
+});
+});

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+  get 'cookbooks/index'
+
+  get 'cookbooks/new'
+
+  get 'cookbooks/show'
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   
