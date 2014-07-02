@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :cookbooks
   
-  root 'login#home'
+  root 'sessions#new'
 
   match "/signup", to: "users#new",  via: 'get'
   
