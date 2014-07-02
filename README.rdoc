@@ -1,4 +1,6 @@
 
+[ ![Codeship Status for hcldevops/cookmaster](https://www.codeship.io/projects/16de37f0-e3f2-0131-3a67-06aaa1f2b67c/status?branch=master)](https://www.codeship.io/projects/25509)
+
 login:
 created sign in and signout functions.
 
