@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @cookbook = Cookbook.new
   end
 
   private

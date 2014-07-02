@@ -14,8 +14,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Help</a></li>
-            <li><a href="#"></a></li>
-            <%= render :partial => 'userinfo' %>
+            <li><a href="#">Account</a></li>
             
           </ul>
           <form class="navbar-form navbar-right">
@@ -31,19 +30,42 @@
           <div id="accordion">
           <h3>cookbooks</h3>
           <div>
-          <ul class="nav nav-sidebar">
-          <li >
-            <li><a href="">Create new</a></li>
-            <li><a href="#">List</a></li>
+          <ul class="nav nav-sidebar">     
+
+            <li><%= link_to 'Create New', '#test_modal', 'data-toggle' => 'modal' %>
+            </li>
+
+            <li><a href="#test_modal">List</a></li>
             <li><a href="#">Download</a></li>            
           </ul>
           </div>
-          </div>
-          
-        </div>
+          </div> 
+        </div> 
+
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
         </div>
       </div>
     </div>
-    
+
+    <div class="modal fade" id="test_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                 <h4 class="modal-title">Create A new Cookbook</h4>
+               
+            </div>
+            <div class="modal-body">
+            <%= render :partial => 'cookbooks/createcookbook' %>
+            <div class="te"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
