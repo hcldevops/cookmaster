@@ -24,7 +24,7 @@
 
 $(function() {
 $( "#accordion" ).accordion({
-active: 2
+active: 5
 });
 $( "#accordion" ).accordion({
 collapsible: true

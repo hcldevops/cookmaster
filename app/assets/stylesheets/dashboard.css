@@ -7,6 +7,13 @@ body {
   padding-top: 50px;
 }
 
+.col-md-2 {
+background: #aaa;
+padding: 5 px;
+height:1024px;
+
+}
+
 
 /*
  * Global add-ons
@@ -30,8 +37,11 @@ body {
  */
 
 /* Hide for mobile, show later */
+
+
 .sidebar {
   display: none;
+  float: left;
 }
 @media (min-width: 768px) {
   .sidebar {

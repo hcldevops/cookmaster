@@ -16,6 +16,9 @@ class UsersController < ApplicationController
 
   def show
     @cookbook = Cookbook.new
+    if !signed_in?
+      redirect_to root_url
+    end
   end
 
   private

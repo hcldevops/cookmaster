@@ -6,5 +6,11 @@ class CookbooksController < ApplicationController
   end
 
   def show
+
+	@cookbook = Cookbook.new
+
+  	if !signed_in?
+  		redirect_to root_url
+  	end
   end
 end
