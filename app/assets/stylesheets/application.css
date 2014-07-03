@@ -56,3 +56,9 @@ margin-left: 25% !important;
 {
 	width: 100%;
 }
+
+.settings-button
+{
+	background: none;
+	border: none;
+}
