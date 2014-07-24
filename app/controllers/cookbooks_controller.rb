@@ -1,7 +1,8 @@
 class CookbooksController < ApplicationController
   before_action :set_cookbook, only: [:show, :edit, :update, :destroy]
   Script_dir = '/home/tyagi/scripts'
-  Repo_dir = '/home/tyagi/chef-repo/cookbooks'
+  # Repo_dir = '/home/tyagi/workspace/cookmaster/public/cookbooks'
+  Repo_dir = '#{RAILS.ROOT}/public/cookbooks'
 
   def index
     @cookbooks = Cookbook.all
@@ -37,6 +38,15 @@ def create
       end
     end
     
+  end
+
+  def destroy
+    @cookbook.destroy
+    system "echo Admin098 | sudo rm -rf #{Repo_dir}/#{@cookbook.name}"
+    respond_to do |format|
+      format.html { redirect_to cookbooks_url, notice: 'Cookbook was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
