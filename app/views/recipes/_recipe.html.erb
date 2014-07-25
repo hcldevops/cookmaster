@@ -1,4 +1,8 @@
 <li>
 <span class="content"><%= recipe.name %></span>
 <span class="content"><%= recipe.content %></span>
+<span class="content"><%= recipe.id %></span>
+<span><%= link_to 'Show', cookbook_recipe_path(@cookbook,recipe) %></span>
+<span><%= link_to 'Destroy', cookbook_recipe_path(@cookbook,recipe), confirm: "Are you sure?", method: :delete %></span>
+
 </li>

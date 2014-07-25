@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-
+  Script_dir = '/home/tyagi/scripts'
+  Repo_dir = '/home/tyagi/workspace/cookmaster/public/cookbooks'
   # GET /recipes
   # GET /recipes.json
   def index
@@ -27,8 +28,9 @@ class RecipesController < ApplicationController
   def create
     @cookbook = Cookbook.find_by_id(params[:cookbook_id])
     @recipe = @cookbook.recipes.create(recipe_params)
-    # raise @recipe.inspect
-    system "echo Admin098 | sudo chef generate recipe #{@cookbook.path} #{@recipe.name}"
+    #raise @recipe.inspect
+
+    system "echo Admin098 | sudo chef generate recipe #{@cookbook.path} #{@recipe.name} "
 
     respond_to do |format|
       if @recipe.save
@@ -59,9 +61,15 @@ class RecipesController < ApplicationController
   # DELETE /recipes/1
   # DELETE /recipes/1.json
   def destroy
+    # @recipe.destroy
+    @cookbook = Cookbook.find_by_id(params[:cookbook_id])
+    @recipe = @cookbook.recipes.find(params[:id])
+    name = @recipe.name
     @recipe.destroy
+    system "echo Admin098 | sudo sh #{Script_dir}/recipe_delete.sh #{@cookbook.path} #{@recipe.name} #{@cookbook.name} #{Repo_dir}"
+
     respond_to do |format|
-      format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
+      format.html { redirect_to @cookbook, notice: 'Recipe was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -74,6 +82,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name)
+      params.require(:recipe).permit(:name,:id)
     end
 end

@@ -5,23 +5,23 @@
 <th> Author</th>
 <th>status</th>
 <th>Date</th>
-<th>Edit</th>
+<th>Options</th>
 
 <!-- On cells (`td` or `th`) -->
 <% @cookbooks.each do |cookbook| %>
 <tr>
   <td ><%= cookbook.name %></td>
   <td ><%= current_user.name %></td>
-  <td >Completed</td>
   <td ><%= cookbook.created_at %></td>
+  <td ><%= cookbook.updated_at %></td>
  
   <td>
           <div class="btn-group">
           <button data-toggle="dropdown" class="settings-button dropdown-toggle"> <%=image_tag("settings.png" ,alt: "settings Image") %> </button>
             <ul class="dropdown-menu">
-                <li><%= link_to 'Edit', edit_cookbook_path(cookbook) %></li>
+                <li><%= link_to 'View', cookbook_path(cookbook.id) %></li>
                 <li><%= link_to 'Delete', cookbook, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-                <li><%= link_to 'View', cookbook %></li>
+                
             </ul>
           </div>
   </td>
