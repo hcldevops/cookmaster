@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-  Script_dir = '/home/tyagi/scripts'
+  Script_dir = '/home/tyagi/workspace/cookmaster/public/scripts'
   Repo_dir = '/home/tyagi/workspace/cookmaster/public/cookbooks'
   # GET /recipes
   # GET /recipes.json
