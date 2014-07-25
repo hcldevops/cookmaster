@@ -3,8 +3,19 @@
 <p>
   <strong>Name:</strong>
   <%= @cookbook.name %>
+  <div class="span8">
+	<% if @cookbook.recipes.any? %>
+	<h3>Recipes </h3>
+	<ol class="recipes">
+	<%= render @recipes %>
+	</ol>
+	
+	<% end %>
+	</div>
+
   
   
   
 
-</p>
+</p><%= link_to 'Edit', edit_cookbook_path(@cookbook) %> | <%= link_to 'Create Recipe', new_cookbook_recipe_path(@cookbook) %> 	|	
+<%= link_to 'Back', cookbooks_path %>

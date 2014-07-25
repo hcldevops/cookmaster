@@ -25,10 +25,10 @@ class CookbooksController < ApplicationController
 
 	# @cookbook = Cookbook.new
   @cookbook = Cookbook.find(params[:id])
-  #@cookbook = Cookbook.new()
-  @cookbooks = Cookbook.all
+  @recipes = @cookbook.recipes
+  # @cookbooks = Cookbook.all
   
-  # @recipes = @cookbook.recipes.paginate(page: params[:page])
+  
 
   	if !signed_in?
   		redirect_to root_url
