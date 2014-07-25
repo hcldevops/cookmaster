@@ -1,62 +1,10 @@
-<% if signed_in? %>
-<table class="table table-hover">
-<!-- On rows -->
-<th> Name</th>
-<th> Author</th>
-<th>status</th>
-<th>Date</th>
-<th>Edit</th>
+<p id="notice"><%= notice %></p>
 
-<!-- On cells (`td` or `th`) -->
-<tr>
-  <td >Mysql</td>
-  <td >Bibin Wilson</td>
-  <td >Pending</td>
-  <td >10/6/2014</td>
-  <td>
-          <div class="btn-group">
-          <button data-toggle="dropdown" class="settings-button dropdown-toggle"> <%=image_tag("settings.png" ,alt: "settings Image") %> </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Edit</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="">View</a></li>
-            </ul>
-          </div>
-  </td>
- </tr>
- <tr>
-  <td >Nginx</td>
-  <td >Eric mathew</td>
-  <td >Completed</td>
-  <td >10/12/2014</td>
-  <td>
-          <div class="btn-group">
-          <button data-toggle="dropdown" class="settings-button dropdown-toggle"> <%=image_tag("settings.png", alt: "settings Image")%> </button></i>
-            <ul class="dropdown-menu">
-                <li><a href="#">Edit</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="">View</a></li>
-            </ul>
-          </div>
-   </td>
-</tr>
+<p>
+  <strong>Name:</strong>
+  <%= @cookbook.name %>
+  
+  
+  
 
-</tr>
- <tr>
-  <td >Jenkins</td>
-  <td >Michael</td>
-  <td >Completed</td>
-  <td >10/10/2014</td>
-  <td>
-  	      <div class="btn-group">
-          <button data-toggle="dropdown" class="settings-button dropdown-toggle"> <%=image_tag("settings.png", alt: "settings Image")%> </button></i>
-            <ul class="dropdown-menu">
-                <li><a href="#">Edit</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="">View</a></li>
-            </ul>
-          </div>
-  </td>
-</tr>
-</table>
-<% end %>
+</p>

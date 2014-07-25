@@ -4,5 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
+  before_filter :set_admin
+  def set_admin
+  	@cookbook = Cookbook.new
+  end
 
 end
