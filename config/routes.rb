@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :cookbooks
+  resources :cookbooks do
+    resources :recipes
+  end
   
   root 'sessions#new'
 
