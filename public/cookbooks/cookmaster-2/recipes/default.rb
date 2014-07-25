@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: CM1
+# Cookbook Name:: cookmaster-2
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME

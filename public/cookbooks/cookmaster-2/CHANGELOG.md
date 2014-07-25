@@ -1,11 +1,11 @@
-CM1 CHANGELOG
-=============
+cookmaster-2 CHANGELOG
+======================
 
-This file is used to list changes made in each version of the CM1 cookbook.
+This file is used to list changes made in each version of the cookmaster-2 cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of CM1
+- [your_name] - Initial release of cookmaster-2
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

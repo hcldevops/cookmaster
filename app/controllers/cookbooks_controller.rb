@@ -1,7 +1,7 @@
 class CookbooksController < ApplicationController
   before_action :set_cookbook, only: [:show, :edit, :update, :destroy]
   Script_dir = '/home/tyagi/scripts'
-  Repo_dir = '/home/tyagi/workspace/cookmaster/public/cookbooks'
+  Repo_dir = '/home/tyagi/workspace/cookmaster/public/cookbooks/'
   # Cookbook_path = 'RAILS.ROOT'
   
 
@@ -39,7 +39,7 @@ def create
 
     @cookbook = Cookbook.new(cookbook_params)
     
-    system "echo Admin098 | sudo sh #{Script_dir}/create_cookbook.sh #{@cookbook.name} "
+    system "echo Admin098 | sudo sh #{Script_dir}/create_cookbook.sh #{@cookbook.name} #{Repo_dir}"
     @cookbook.path = "#{Repo_dir}/#{@cookbook.name}"
     
     respond_to do |format|

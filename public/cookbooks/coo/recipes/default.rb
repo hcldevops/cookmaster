@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: CM3
+# Cookbook Name:: coo
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME
