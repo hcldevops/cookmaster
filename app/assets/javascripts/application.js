@@ -12,21 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-// *= require bootstrap
+//= require bootstrap
 //= require turbolinks
-//= require bootbox.min
 //= require jquery.ui.all
-
-
-
-
 //= require_tree .
 
 $(function() {
-$( "#accordion" ).accordion({
-active: 5
+$( "#accordion" ).accordion({ active: 5 });
+$( "#accordion" ).accordion({ collapsible: true });
 });
-$( "#accordion" ).accordion({
-collapsible: true
-});
-});
+

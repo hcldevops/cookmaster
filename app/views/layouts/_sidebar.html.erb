@@ -1,74 +1,17 @@
 
-    
-        <div class="col-md-2">
-          <div id="accordion">
-          <h3>cookbooks</h3>
-          <div>
-          <ul class="nav nav-sidebar">     
+<% if params[:controller] = "users" && params[:action] == "show" %>
+<%= render :partial=> 'layouts/commonsidebar' %>
+<% elsif params[:controller] = "cookbooks" && params[:action] == "index" %>
+<%= render :partial=> 'layouts/commonsidebar' %>
 
-            <li><%= link_to 'Create New', '#test_modal', 'data-toggle' => 'modal' %>
-            </li>
+<% elsif params[:controller] = "cookbooks" && params[:action] == "show" %>
+<%= render :partial=> 'layouts/commonsidebar' %>
 
-            <li><%= link_to 'List' , cookbooks_path , method: "get" %></li>
-            <li><a href="#">Upload</a></li>  
-            <li><a href="#">Download</a></li>            
-          </ul>
-          </div>
+<% elsif params[:controller] = "recipes" && params[:action] == "show" %>
+<h2> you are in recipes edit dashboard </h2>
 
-          <h3>Nodes</h3>
-          <div>
-          <ul class="nav nav-sidebar">     
+<%#= render :partial=> 'layouts/reditsidebar' %>
+<% else %>
+<%= render :partial => 'layouts/commonsidebar' %>
 
-            <li><%= link_to 'New', '#test_modal', 'data-toggle' => 'modal' %>
-            </li>
-
-            <li><a href="#test_modal">List</a></li>
-            <li><a href="#">Status</a></li>   
-             <li><a href="#test_modal">List</a></li>         
-          </ul>
-          </div>
-
-          <h3>Reports</h3>
-          <div>
-          <ul class="nav nav-sidebar">    
-            <li><a href="#test_modal">Last run</a></li>
-            <li><a href="#">Download</a></li>            
-          </ul>
-          </div>
-
-
-          </div> 
-
-        </div> 
-
-
-<!--modal window for creating a new cookbook -->
-
-<div class="modal fade" id="test_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                 <h4 class="modal-title">Create A new Cookbook</h4>
-               
-            </div>
-
-            
-
-            <div class="modal-body">
-            <%= render :partial => 'cookbooks/createcookbook' %>
-            
-            <div class="te"></div>
-            </div>
-            
-            
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-    <!-- new cookbook modal window ends here -->
+  <% end %>
