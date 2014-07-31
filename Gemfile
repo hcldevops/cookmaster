@@ -8,6 +8,8 @@ gem 'pg'
 gem 'font-awesome-rails'
 gem 'less-rails'
 gem 'therubyracer'
+# feedjira for pulling rss feed
+gem 'feedjira'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

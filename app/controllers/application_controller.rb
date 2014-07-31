@@ -9,6 +9,8 @@ class ApplicationController < ActionController::Base
   	@cookbook = Cookbook.new
   	@cookbooks = Cookbook.all
   	@recipe = @cookbook.recipes.build
+
   end
 
+  
 end
