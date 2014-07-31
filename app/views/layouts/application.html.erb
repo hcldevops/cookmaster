@@ -16,16 +16,19 @@
   <![endif]-->
 </head>
 <body class="skin-blue">
+<% if !signed_in? %>
+<%= yield %>
+  <% end %>
  <% if signed_in? %>
   <header class="header">
 <%= render :partial => 'layouts/header' %>
 </header>
-<% end %>
+
 <div class="wrapper row-offcanvas row-offcanvas-left">
 <aside class="left-side sidebar-offcanvas">
- <% if signed_in? %>
+ 
 <%= render :partial => 'layouts/sidebar' %>
-       <% end %>       
+         
   </aside>
    <aside class="right-side">    
       <%= yield %>
@@ -33,7 +36,7 @@
 
 
 </div>
-   
+<% end %>   
 </body> 
 
 

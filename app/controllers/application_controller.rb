@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   def set_admin
   	@cookbook = Cookbook.new
   	@cookbooks = Cookbook.all
+  	@recipe = @cookbook.recipes.build
   end
 
 end

@@ -1,4 +1,69 @@
 <section class="content-header">
+                    <h1>
+                        <%= @cookbook.name.mb_chars.capitalize.to_s %>
+                        <small>Cookbook Overview</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li class="active">Dashboard</li>
+                    </ol>
+                </section>
+<section class="content">
+<div class="row">
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+                                        <%= @recipes.count %>
+                                    </h3>
+                                    <p>
+                                        Total Recipes
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-book"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        
+                    </div><!-- /.row -->
+
+<section class="col-lg-5 connectedSortable pull-right"> 
+
+                            <!-- Map box -->
+                            <div class="box box-solid bg-light-blue-gradient">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range"><i class="fa fa-calendar"></i></button>
+                                        <button class="btn btn-primary btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                                    </div><!-- /. tools -->
+
+                                    <i class="fa fa-map-marker"></i>
+                                    <h3 class="box-title">
+                                        <%= @cookbook.name %> Cookbook Info
+                                    </h3>
+                                </div>
+                                <div class="box-body">
+                                    This is just dummy data about the cookbook.
+                                </div><!-- /.box-body-->
+                                
+                            </div>
+                            <!-- /.box -->
+
+                                                 
+
+                       </section>
+</section>
+
+
+
+<section class="content-header">
 <p id="notice"><%= notice %></p>
 
 <p>

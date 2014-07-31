@@ -25,7 +25,7 @@ class CookbooksController < ApplicationController
 
 	# @cookbook = Cookbook.new
   @cookbook = Cookbook.find(params[:id])
-  @recipes = @cookbook.recipes
+  @recipes = @cookbook.recipes.all
   # @cookbooks = Cookbook.all
   
   
