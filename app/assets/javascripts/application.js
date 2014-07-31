@@ -17,8 +17,12 @@
 //= require jquery.ui.all
 //= require_tree .
 
-$(function() {
-$( "#accordion" ).accordion({ active: 5 });
+//$( document ).ready(function() {
+$(document).on('ready page:load', function () {
+$( "#accordion" ).accordion({ active: true  });
 $( "#accordion" ).accordion({ collapsible: true });
+$( "#accordian" ).accordion({ event: "mouseover" });
+//$( "#accordion" ).accordion( "option", "active", 1 );
 });
+
 

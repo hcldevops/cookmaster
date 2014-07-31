@@ -1,47 +1,45 @@
 
                 <!-- sidebar: style can be found in sidebar.less -->
-                <section class="sidebar">
+        <section class="sidebar">
                     <!-- Sidebar user panel -->
                   
                     <!-- search form -->
               
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
-
-        <div id="accordion" class="sidebar-menu">
+                     
+        <div id="accordion" class="sidebar-menu" >
         
-          <h3> Cookbook <i class="fa fa-plus-square pull-right"></i></h3>         
+          <h3> Cookbook <i class="fa fa-book pull-left"></i></h3>         
 
           <div>
           <ul>     
 
             <li class="back"><%= link_to 'Create New', '#test_modal', 'data-toggle' => 'modal' %>
             </li>
-
             <li><%= link_to 'List' , cookbooks_path , method: "get" %></li>
             <li><a href="#">Upload</a></li>  
             <li><a href="#">Download</a></li>            
           </ul>
           </div>
-
-          <h3>Nodes</h3>
+          <h3>Nodes<i class="fa fa-bars pull-left"></i></h3>
           <div>
-          <ul class="back" >            
-
+          <ul>          
             <li class="back"><a href="#test_modal">List</a></li>
             <li><a href="#">Status</a></li>   
-             <li><a href="#test_modal">List</a></li>         
+            <li><a href="#test_modal">List</a></li> 
+            <li><a href="#test_modal">List</a></li>          
           </ul>
           </div>
 
-          <h3>Reports</h3>
+          <h3>Reports<i class="fa fa-outdent pull-left"></i></h3>
           <div>
-          <ul class="nav nav-sidebar">    
+          <ul>    
             <li><a href="#test_modal">Last run</a></li>
             <li><a href="#">Download</a></li>            
           </ul>
           </div>
-
+           
 
           </div> 
                       

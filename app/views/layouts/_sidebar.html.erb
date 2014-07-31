@@ -1,17 +1,16 @@
 
-<% if params[:controller] = "users" && params[:action] == "show" %>
-<%= render :partial=> 'layouts/commonsidebar' %>
-<% elsif params[:controller] = "cookbooks" && params[:action] == "index" %>
-<%= render :partial=> 'layouts/commonsidebar' %>
+<% if params[:controller] == "users" && params[:action] == "show" %>
+<%= render :partial => 'layouts/commonsidebar' %>
 
-<% elsif params[:controller] = "cookbooks" && params[:action] == "show" %>
-<%= render :partial=> 'layouts/commonsidebar' %>
-
-<% elsif params[:controller] = "recipes" && params[:action] == "show" %>
+<% elsif params[:controller] == "cookbooks" && params[:action] == "show" %>
+<%= render :partial => 'layouts/commonsidebar' %>
+<h1> cookbook specifi sidebar here </h1> 
+<% elsif params[:controller] =="cookbooks" && params[:action] == "show" %>
+<%#= render :partial=> 'layouts/commonsidebar' %>
+<% elsif params[:controller] == "recipes" && params[:action] == "show" %>
 <h2> you are in recipes edit dashboard </h2>
-
 <%#= render :partial=> 'layouts/reditsidebar' %>
 <% else %>
 <%= render :partial => 'layouts/commonsidebar' %>
 
-  <% end %>
+<% end %>
