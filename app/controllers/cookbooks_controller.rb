@@ -38,7 +38,6 @@ class CookbooksController < ApplicationController
 def create
 
     @cookbook = Cookbook.new(cookbook_params)
-    
     system "echo Admin098 | sudo sh #{Script_dir}/create_cookbook.sh #{@cookbook.name} #{Repo_dir}"
     @cookbook.path = "#{Repo_dir}/#{@cookbook.name}"
     
@@ -49,16 +48,20 @@ def create
         format.html { redirect_to @cookbook, notice: 'Cookbook was successfully created.' }
         format.json { render :show, status: :created, location: @cookbook }
       else
-        format.html { render :new }
-        format.json { render json: @cookbook.errors, status: :unprocessable_entity }
+        format.html { redirect_to cookbooks_url, notice: 'Cookbook with same name already exists.' }
+        format.json { head :no_content }
+        # format.html { render :new }
+        # format.json { render json: @cookbook.errors, status: :unprocessable_entity }
       end
     end
     
+
   end
 
   def destroy
     @cookbook.destroy
     system "echo Admin098 | sudo rm -rf #{Repo_dir}/#{@cookbook.name}"
+    system "echo Admin098 | sudo sh #{Script_dir}/delete_cookbook.sh #{@cookbook.name}"
     respond_to do |format|
       format.html { redirect_to cookbooks_url, notice: 'Cookbook was successfully destroyed.' }
       format.json { head :no_content }
