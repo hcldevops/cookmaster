@@ -1,54 +1,28 @@
-<% provide(:title ,'Login') %>
- <div class="col-md-6 col-md-offset-6">
-            <div class="panel panel-default">
-                <div class="panel-heading"> <strong class="">Cook Master Login</strong>
+<div class="login-screen">
+          <div class="login-icon">
+           <i class="fa fa-codepen fa-5x"></i>
+            <h4>Welcome to <small>Cook Master</small></h4>
+          </div>
 
-                </div>
-                <div class="panel-body">
+          <div class="login-form">
+          <%= form_for(:session, url: sessions_path) do |f| %>
+            <div class="form-group">
+             <%= f.text_field :email, :id => "login-name" , class: "form-control login-field" , placeholder: "enter your email" %>
+              
+              <label for="login-name" class="login-field-icon fui-user"></label>
+            </div>
 
-                    <div class="form-horizontal">
-                    <%= form_for(:session, url: sessions_path) do |f| %>
-                        <div class="form-group">
-                        <%= f.label :email , class: "col-sm-3 control-label" %>                           
-                            <div class="col-sm-9">
-                               <%= f.text_field :email, class: "form-control" , placeholder: "enter your email" %>
-                            </div>
-                        </div>
-                            <div class="form-group">
-                        <%= f.label :password , class: "col-sm-3 control-label" , type: "password" %>                           
-                            <div class="col-sm-9">
-                               <%= f.password_field :password, class: "form-control" , placeholder: "enter your password" %>
-                            </div>
-                        </div>
-
-                     
-          <!--              <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-9">
-                  <div class="checkbox">
-                    <label class="">
-                      <input class="" type="checkbox">Remember me</label>
-                  </div>
-                </div>
-              </div>
-              -->
-   
-                        <div class="form-group last">
-                            <div class="col-sm-offset-3 col-sm-9">
-                            <%= f.submit "Sign in", class: "btn btn-success btn-sm" %>
-                                
-                                <%= link_to "Sign up now!", signup_path, class: "btn btn-default btn-sm" %>
-                                
-                            </div>
-                          
-                        </div>
-                        <% end %>
-                    </div>
-                   
-                </div>
-                  <div class="panel-footer"> 
+            <div class="form-group">
+             <%= f.password_field :password, :id => "login-pass" ,class: "form-control login-field" , placeholder: "enter your password" %>
+             
+              <label for="login-pass" class="login-field-icon fui-lock"></label>
+            </div>
+           
+             <%= f.submit "Sign in", class: "btn btn-primary btn-lg btn-block" %>
+           
+            <div class="panel-footer"> 
                        <p style="margin-left:25%">New user? <%= link_to "Sign up now!", signup_path %></p>
                      </div>
-                
-            </div>
-  
-</div>
+            <% end %>
+          </div>
+        </div>

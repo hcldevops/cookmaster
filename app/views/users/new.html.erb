@@ -1,3 +1,4 @@
+<% if !signed_in? %>
 <div class="login-screen">
           <div class="login-icon">
            <i class="fa fa-codepen fa-5x"></i>
@@ -5,18 +6,43 @@
           </div>
 
           <div class="login-form">
+           <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages' %>
             <div class="form-group">
-              <input type="text" id="login-name" placeholder="Enter your name" value="" class="form-control login-field">
+            <%= f.text_field :name , class: "form-control login-field" , placeholder: "name" %>          
+              
               <label for="login-name" class="login-field-icon fui-user"></label>
             </div>
 
             <div class="form-group">
-              <input type="password" id="login-pass" placeholder="Password" value="" class="form-control login-field">
+             <%= f.text_field :email ,class: "form-control login-field" ,placeholder: "email" %>
+             
               <label for="login-pass" class="login-field-icon fui-lock"></label>
             </div>
 
-            <a href="#" class="btn btn-primary btn-lg btn-block">Log in</a>
-            <a href="#" class="login-link">Lost your password?</a>
-            <a href="#" class="login-link">Lost your password?</a>
+            <div class="form-group">
+             <%= f.password_field :password ,class: "form-control login-field" ,placeholder: "password"%>
+             
+              <label for="login-pass" class="login-field-icon fui-lock"></label>
+            </div>
+               <div class="form-group">
+             <%= f.password_field :password ,class: "form-control login-field" ,placeholder: "Confirm password"%>
+             
+              <label for="login-pass" class="login-field-icon fui-lock"></label>
+            </div>           
+             
+           <%= f.submit "Create my account", class: "btn btn-success btn-sm" %>
+      <%= f.submit "Reset", class: "btn btn-warning btn-sm" , type: "reset" %>
+            <div class="panel-footer"> 
+                       <p style="margin-left:25%">Registered user? <%= link_to "Sign In", login_path %></p>
+                     </div>
+            <% end %>
           </div>
         </div>
+
+<% else %>
+</br>
+</br>
+<h1> your are already signed Bro </h1>
+
+<% end %>

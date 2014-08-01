@@ -65,6 +65,10 @@ def create
     end
   end
 
+def search
+  @scookbook = Cookbook.search params[:search]
+end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cookbook

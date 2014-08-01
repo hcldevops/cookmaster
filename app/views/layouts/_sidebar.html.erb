@@ -3,9 +3,9 @@
 <%= render :partial => 'layouts/commonsidebar' %>
 
 <% elsif params[:controller] == "cookbooks" && params[:action] == "show" %>
-<%= render :partial => 'recipes/sidebar' %>
-<% elsif params[:controller] =="cookbooks" && params[:action] == "show" %>
-<%#= render :partial=> 'layouts/commonsidebar' %>
+<%= render :partial => 'cookbooks/sidebar' %>
+<% elsif params[:controller] =="recipes" && params[:action] == "index" %>
+<%= render :partial=> 'recipes/sidebar' %>
 <% elsif params[:controller] == "recipes" && params[:action] == "show" %>
 <h2> you are in recipes edit dashboard </h2>
 <%#= render :partial=> 'layouts/reditsidebar' %>
