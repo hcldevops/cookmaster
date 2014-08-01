@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
 
   match "/signup", to: "users#new",  via: 'get'
+  match "/dashboard" , to: "users#show" , via: 'get'
   
   match '/login',  to: 'sessions#new',         via: 'get'
   match '/logout', to: 'sessions#destroy',     via: 'delete'

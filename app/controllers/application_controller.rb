@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
   before_filter :set_admin
   def set_admin
   	@cookbook = Cookbook.new
+  	@cookbooks = Cookbook.all
+  	@recipe = @cookbook.recipes.build
+
   end
 
+  
 end

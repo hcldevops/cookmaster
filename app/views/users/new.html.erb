@@ -1,64 +1,22 @@
+<div class="login-screen">
+          <div class="login-icon">
+           <i class="fa fa-codepen fa-5x"></i>
+            <h4>Welcome to <small>Cook Master</small></h4>
+          </div>
 
-<div class="container-fluid vcenter">
-    <div class="row">
-        <div class="col-sm-4 col-sm-offset-3">
-            <div class="panel panel-default">
-                <div class="panel-heading"> <strong class="">Cook Master Signup</strong>
-
-                </div>
-                <div class="panel-body">
-                    <div class="form-horizontal" role="form">
-                       
-                        <%= form_for(@user) do |f| %>
-                        <%= render 'shared/error_messages' %>
-      <div class="form-group">
-      <%= f.label :name , class: "col-sm-3 control-label" %>
-      <div class="col-sm-9">
-      <%= f.text_field :name , class: "form-control" , placeholder: "name" %>
-      </div>
-      </div>
-      <div class="form-group">
-      <%= f.label :email, class: "col-sm-3 control-label" %>
-      <div class="col-sm-9">
-      <%= f.text_field :email ,class: "form-control" ,placeholder: "email" %>
-      </div>
-      </div>
-      <div class="form-group">
-      <%= f.label :password ,class: "col-sm-3 control-label"%>
-      <div class="col-sm-9">
-      <%= f.password_field :password ,class: "form-control" ,placeholder: "password"%>
-      </div>
-      </div>
-      <div class="form-group">
-      <%= f.label :password_confirmation, class: "col-sm-3 control-label" %>
-       <div class="col-sm-9">
-      <%= f.password_field :password_confirmation ,class: "form-control" ,placeholder: "confirm password"%>
-      </div>
-      </div>
-      <div class="form-group last">
-      <div class="col-sm-offset-3 col-sm-9">
-      <%= f.submit "Create my account", class: "btn btn-success btn-sm" %>
-      <%= f.submit "Reset", class: "btn btn-default btn-sm" , type: "reset" %>
-      </div>
-      </div>
-    <% end %>
-     </div>
-                        <!-- <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-9">
-                  <div class="checkbox">
-                    <label class="">
-                      <input class="" type="checkbox">Remember me</label>
-                  </div>
-                </div>
-              </div>
-   -->
-                        
-                    
-                </div>
-                 <div class="panel-footer"> 
-                       <p style="margin-left:25%">Already have an account? <%= link_to "Log in", login_path %></p>
-                     </div>
+          <div class="login-form">
+            <div class="form-group">
+              <input type="text" id="login-name" placeholder="Enter your name" value="" class="form-control login-field">
+              <label for="login-name" class="login-field-icon fui-user"></label>
             </div>
+
+            <div class="form-group">
+              <input type="password" id="login-pass" placeholder="Password" value="" class="form-control login-field">
+              <label for="login-pass" class="login-field-icon fui-lock"></label>
+            </div>
+
+            <a href="#" class="btn btn-primary btn-lg btn-block">Log in</a>
+            <a href="#" class="login-link">Lost your password?</a>
+            <a href="#" class="login-link">Lost your password?</a>
+          </div>
         </div>
-    </div>
-</div>

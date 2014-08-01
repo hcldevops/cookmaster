@@ -1,0 +1,76 @@
+
+                <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                  
+                    <!-- search form -->
+              
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                     
+        <div id="accordion" class="sidebar-menu" >
+        
+          <h3> Recipes <i class="fa fa-book pull-left"></i></h3>         
+
+          <div>
+          <ul>     
+
+            <li class="back"><%= link_to 'Create New', '#test_modal', 'data-toggle' => 'modal' %>
+            </li>
+            <li><%= link_to 'List' , cookbook_recipes_path(@cookbook) , method: "get" %></li>
+                  
+          </ul>
+          </div>
+          <h3>Nodes<i class="fa fa-bars pull-left"></i></h3>
+          <div>
+          <ul>          
+            <li class="back"><a href="#test_modal">List</a></li>
+            <li><a href="#">Status</a></li>   
+            <li><a href="#test_modal">List</a></li> 
+            <li><a href="#test_modal">List</a></li>          
+          </ul>
+          </div>
+
+          <h3>Reports<i class="fa fa-outdent pull-left"></i></h3>
+          <div>
+          <ul>    
+            <li><a href="#test_modal">Last run</a></li>
+            <li><a href="#">Download</a></li>            
+          </ul>
+          </div>
+           
+
+          </div> 
+                      
+                     
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+
+                <!-- modal windows for creating a new cookbook -->
+         
+         <div class="modal fade" id="test_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                 <h4 class="modal-title">Create A new Recipe</h4>
+               
+            </div>            
+
+            <div class="modal-body">
+            <%= render :partial => 'recipes/form' %>
+            
+            <div class="te"></div>
+            </div>
+            
+            
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

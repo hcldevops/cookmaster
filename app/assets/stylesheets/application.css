@@ -15,49 +15,49 @@
  *= require bootstrap
  *= require custom
  *= require dashboard
+ *= require admin
+ *= require users
+ *= require font-awesome
  *= require jquery.ui.all
 
 */
 
 /* CSS used here will be applied after bootstrap.css */
- .navbar-inverse .navbar-brand
+ .table
 {
-	color: #fff !important ;
-	font-size: 25px;
-	text-transform: uppercase;
-}
-.nav .navbar-collapse.navbar-nav .navbar-right
-{
-	color: #fff !important;
-}
-
-.panel .panel-default {
-
-margin-left: 25% !important;
-}
-
-
-.alert p
-{
-	margin: auto;
-	font-size: 15px;
-	color: #fff;
-	padding-left: 30%;
-}
-
-#accordion
-{
-	padding-top: 15px;
-}
-
-/* for table in dashborad */
-.table
-{
-	width: 100%;
+width: 100%;
 }
 
 .settings-button
 {
-	background: none;
-	border: none;
+background: none;
+border: none;
+}
+
+
+#accordion h3{
+  color:#fff;
+font-size: 17px;
+  background:#3498db;
+  cursor:pointer;
+  padding:8px; 
+    
+  }
+
+  #accordion ul li{list-style: none !important;}
+
+  #accordion .ui-accordion-content{padding:0px !important;}
+  #accordion .ui-accordion-content ul{padding:0 !important; margin:0; !important;}
+  #accordion .ui-accordion-content ul li{padding:5px !important; font-color: #fff; margin: 1px; background: #7f8c8d;}
+  #accordion .ui-accordion-content ul li:hover{background:#fafafa;}
+
+  #accordion .ui-corner-all, #accordion .ui-corner-top, #accordion .ui-corner-right, #accordion .ui-corner-tr{border-radius: 0px !important;}
+ .ui-accordion-header .ui-accordion-header-icon {
+ display: none;
+}
+
+#accordian  .back {
+	background:#cd4900;
+	width:400px;
+	height:200px;
 }
