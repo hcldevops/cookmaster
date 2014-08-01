@@ -32,6 +32,7 @@ class RecipesController < ApplicationController
     #raise @recipe.inspect
 
     system "echo Admin098 | sudo chef generate recipe #{@cookbook.path} #{@recipe.name} "
+    system "echo Admin098 | sudo sh #{Script_dir}/upload_cookbook.sh #{@cookbook.name}"
 
     respond_to do |format|
       if @recipe.save

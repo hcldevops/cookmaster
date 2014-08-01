@@ -29,6 +29,13 @@
                                     More info <i class="fa fa-arrow-circle-right"></i>
                                 </a>
                             </div>
+                            
+                                <% dir = Dir.entries(@cookbook.path) 
+                                    dir.each do |folder| %>
+                                        <li><%= folder %></li>
+                                        
+                                    <% end %>
+                            
                         </div><!-- ./col -->
                         
                     </div><!-- /.row -->

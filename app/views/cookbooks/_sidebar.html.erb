@@ -17,11 +17,8 @@
 
             <li class="back"><%= link_to 'Create New', '#test_modal', 'data-toggle' => 'modal' %>
             </li>
-            <% if params[:controller]== "cookbooks" && params[:action] == "show" %>
-            <li><%= link_to 'List' , cookbook_recipes_path(@cookbook) , method: "get" %></li>
-            <% end %>
-            <%#elsif params[:controller]== "recipes" && params[:action] == "index" %>
 
+            <li><%= link_to 'List' , cookbook_recipes_path(@cookbook) , method: "get" %></li>
 
                   
           </ul>
@@ -64,7 +61,9 @@
             </div>            
 
             <div class="modal-body">
-            <%= render :partial => 'recipes/form' ,cookbook_id: @cookbook.id %>
+
+            <%= render :partial => 'recipes/form' %>
+
             
             <div class="te"></div>
             </div>
