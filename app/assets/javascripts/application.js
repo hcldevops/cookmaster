@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
-//= require jquery.ui.all
+//= require jquery.ui.accordion
 //= require_tree .
 
 //$( document ).ready(function() {

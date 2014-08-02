@@ -1,3 +1,4 @@
+
 <section class="content-header">
                     <h1>
                         <%= @cookbook.name.mb_chars.capitalize.to_s %>
@@ -13,26 +14,33 @@
 <div class="row">
                         <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
-                            <div class="small-box bg-aqua">
+                                                       
+                                <% dir = Dir.entries(@cookbook.path) 
+                                    dir.each do |folder| %>
+                                    <% if folder == '.' or folder == '..' %>
+                                    <%= "" %>
+                                 
+
+
+                                    <% else %>
+                                <div class="recipelist small-box bg-aqua">
                                 <div class="inner">
-                                    <h3>
-                                        <%= @recipes.count %>
+                                    <h3>                                          
+                                        
                                     </h3>
                                     <p>
-                                        Total Recipes
+                                       <%= folder %>
+                                       <% end %>
                                     </p>
                                 </div>
-                                <div class="icon">
+                                <!-- <div class="icon">
                                     <i class="fa fa-book"></i>
-                                </div>
+                                </div> -->
                                 <a href="#" class="small-box-footer">
                                     More info <i class="fa fa-arrow-circle-right"></i>
                                 </a>
                             </div>
-                            
-                                <% dir = Dir.entries(@cookbook.path) 
-                                    dir.each do |folder| %>
-                                        <li><%= folder %></li>
+                                       
                                         
                                     <% end %>
                             

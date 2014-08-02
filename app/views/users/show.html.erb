@@ -141,9 +141,9 @@
                                                                          
 
 
-                                <div id="ticker">
-        <div id="ticker-wrapper">
-            <ul id="ticker-wrapper-inner">
+                                <div id="ticker" >
+        <div id="ticker-wrapper" >
+            <ul id="ticker-wrapper-inner"  >
                 <% for entry in FeedEntry.all.order('created_at DESC').take(10) %>
                                     <span data-title="sollicitudin"><li><%= link_to h(entry.name), entry.url ,:target => "_blank" %></li> </span>
                                   <% end %>              

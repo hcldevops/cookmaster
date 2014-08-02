@@ -1,3 +1,5 @@
+
+
 class CookbooksController < ApplicationController
   before_action :set_cookbook, only: [:show, :edit, :update, :destroy]
   Script_dir = '/home/cookmaster/sites/cookmaster/public/scripts'
@@ -71,6 +73,8 @@ def create
 def search
   @scookbook = Cookbook.search params[:search]
 end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

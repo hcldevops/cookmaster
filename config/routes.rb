@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   match "/dashboard" , to: "users#show" , via: 'get'
   
   match '/login',  to: 'sessions#new',         via: 'get'
+   match '/test',  to: 'users#test',         via: 'get'
   match '/logout', to: 'sessions#destroy',     via: 'delete'
   match '/booklist', to: 'cookbooks#list', via: 'get'
 
