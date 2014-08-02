@@ -11,26 +11,25 @@
                     </ol>
                 </section>
 <section class="content">
+    
+
 <div class="row">
-                        <div class="col-lg-3 col-xs-6">
-                            <!-- small box -->
-                                                       
-                                <% dir = Dir.entries(@cookbook.path) 
+<% dir = Dir.entries(@cookbook.path) 
                                     dir.each do |folder| %>
                                     <% if folder == '.' or folder == '..' %>
                                     <%= "" %>
-                                 
-
-
-                                    <% else %>
+                                     <% else %>
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                   
                                 <div class="recipelist small-box bg-aqua">
                                 <div class="inner">
                                     <h3>                                          
                                         
                                     </h3>
                                     <p>
-                                       <%= folder %>
-                                       <% end %>
+                                       <%= folder.mb_chars.capitalize.to_s%>
+                                      
                                     </p>
                                 </div>
                                 <!-- <div class="icon">
@@ -40,13 +39,12 @@
                                     More info <i class="fa fa-arrow-circle-right"></i>
                                 </a>
                             </div>
-                                       
-                                        
-                                    <% end %>
-                            
+                
                         </div><!-- ./col -->
-                        
+                        <% end %>
+                        <% end %>
                     </div><!-- /.row -->
+                     
 
 <section class="col-lg-5 connectedSortable pull-right"> 
 
@@ -78,27 +76,3 @@
 
 
 
-<section class="content-header">
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @cookbook.name %>
-  <div class="span8">
-	<% if @cookbook.recipes.any? %>
-	<h3>Recipes </h3>
-	<ol class="recipes">
-	<%= render @recipes %>
-	</ol>
-	
-	<% end %>
-	</div>
-
-  
-  
-  
-
-</p><%= link_to 'Edit', edit_cookbook_path(@cookbook) %> | <%= link_to 'Create Recipe', new_cookbook_recipe_path(@cookbook) %> 	|	
- 	|	
-<%= link_to 'Back', cookbooks_path %>
-</section>
