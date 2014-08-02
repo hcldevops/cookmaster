@@ -16,14 +16,23 @@
 //= require bootstrap
 //= require turbolinks
 //= require jquery.ui.accordion
+//= require jquery.ui.resizable
 //= require_tree .
 
 //$( document ).ready(function() {
-$(document).on('ready page:load', function () {
+$( function () {
 $( "#accordion" ).accordion({ active: true  });
 $( "#accordion" ).accordion({ collapsible: true });
 //$( "#accordion" ).accordion( "option", "active", 1 );
 });
+
+// resizable div
+
+ $(function() {
+$( "#drag").resizable({ handles: 'n' });
+});
+
+
 
 // for rss ticker
 
@@ -104,3 +113,4 @@ $( "#accordion" ).accordion({ collapsible: true });
 
 
 })();
+
