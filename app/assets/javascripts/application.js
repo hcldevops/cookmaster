@@ -21,8 +21,12 @@
 
 //$( document ).ready(function() {
 $( function () {
-$( "#accordion" ).accordion({ active: true  });
-$( "#accordion" ).accordion({ collapsible: true });
+$( "#accordion" ).accordion({ active: true,
+collapsible: true,
+heightStyle: content
+
+ });
+
 //$( "#accordion" ).accordion( "option", "active", 1 );
 });
 
