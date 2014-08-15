@@ -2,10 +2,10 @@
 
 class CookbooksController < ApplicationController
   before_action :set_cookbook, only: [:show, :edit, :update, :destroy]
-  Script_dir = '/home/cookmaster/workspace/test/public/scripts'
-  Repo_dir = '/home/cookmaster/workspace/test/public/cookbooks'
-  # Cookbook_path = 'RAILS.ROOT'
-  
+  # Script_dir = '/home/cookmaster/workspace/test/public/scripts'
+  # Repo_dir = '/home/cookmaster/workspace/test/public/cookbooks'
+  Script_dir = Rails.root.join('public' , 'scripts')
+  Repo_dir = Rails.root.join('public' , 'cookbooks')  
 
   def index
     @cookbooks = Cookbook.all
@@ -24,7 +24,6 @@ class CookbooksController < ApplicationController
   end
 
   def show
-
 
   @cookbook = Cookbook.find(params[:id])
   @recipes = @cookbook.recipes.all 

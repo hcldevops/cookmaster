@@ -1,43 +1,42 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-  Script_dir = '/home/tyagi/workspace/cookmaster/public/scripts'
-  Repo_dir = '/home/tyagi/workspace/cookmaster/public/cookbooks'
-  # GET /recipes
-  # GET /recipes.json
+  # Script_dir = '/home/cookmaster/workspace/test/public/scripts'
+  # Repo_dir = '/home/cookmaster/workspace/test/public/cookbooks'
+
+  Script_dir = Rails.root.join('public' , 'scripts')
+  Repo_dir = Rails.root.join('public' , 'cookbooks')
+
   def index
-    @recipes = Recipe.all
+    #@recipes = Recipe.all
+    @cookbook = Cookbook.find_by_id(params[:cookbook_id])
+    @recipes = @cookbook.recipes.all
     
   end
 
-  # GET /recipes/1
-  # GET /recipes/1.json
+
   def show
     @packages = Packages.all
   end
 
-  # GET /recipes/new
+ 
   def new
     @cookbook = Cookbook.find_by_id(params[:cookbook_id])
     @recipe = @cookbook.recipes.build
   end
 
-  # GET /recipes/1/edit
   def edit
   end
 
-  # POST /recipes
-  # POST /recipes.json
+ 
   def create
     @cookbook = Cookbook.find_by_id(params[:cookbook_id])
     @recipe = @cookbook.recipes.create(recipe_params)
-    #raise @recipe.inspect
-
-    
+    @cookbook.path = "#{Repo_dir}/#{@cookbook.name}"   
 
     respond_to do |format|
       if @recipe.save
-        system "echo bibinmtech | sudo chef generate recipe #{@cookbook.path} #{@recipe.name} "
-         system "echo bibinmtech | sudo sh #{Script_dir}/upload_cookbook.sh #{@cookbook.name}"
+        system "echo bibinmtech | sudo chef generate recipe #{@cookbook.path} #{@recipe.name.chomp('.rb') } "
+        #system "echo bibinmtech | sudo sh #{Script_dir}/upload_cookbook.sh #{@cookbook.name}"
         flash[:success] = "Recipe created"
         format.html { redirect_to @cookbook, notice: 'Recipe was successfully created.' }
         # format.json { render :show, status: :created, location: @current_cookbook }
