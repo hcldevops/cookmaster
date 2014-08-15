@@ -17,7 +17,7 @@
 
             <li class="back"><%= link_to 'Create New', '#test_modal', 'data-toggle' => 'modal' %>
             </li>
-            <li><%= link_to 'List' , cookbook_recipes_path , method: "get" %></li>
+            <li><%= link_to 'List' , cookbook_recipes_path(@cookbook) , method: "get" %></li>
                   
           </ul>
           </div>

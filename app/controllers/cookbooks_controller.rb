@@ -2,8 +2,8 @@
 
 class CookbooksController < ApplicationController
   before_action :set_cookbook, only: [:show, :edit, :update, :destroy]
-  Script_dir = '/home/cookmaster/sites/cookmaster/public/scripts'
-  Repo_dir = '/home/cookmaster/sites/cookmaster/public/cookbooks'
+  Script_dir = '/home/cookmaster/workspace/test/public/scripts'
+  Repo_dir = '/home/cookmaster/workspace/test/public/cookbooks'
   # Cookbook_path = 'RAILS.ROOT'
   
 
@@ -25,12 +25,10 @@ class CookbooksController < ApplicationController
 
   def show
 
-	# @cookbook = Cookbook.new
+
   @cookbook = Cookbook.find(params[:id])
-  @recipes = @cookbook.recipes.all
-  # @cookbooks = Cookbook.all
-  
-  
+  @recipes = @cookbook.recipes.all 
+   @cookbook.path = "#{Repo_dir}/#{@cookbook.name}"
 
   	if !signed_in?
   		redirect_to root_url
@@ -40,20 +38,16 @@ class CookbooksController < ApplicationController
 def create
 
     @cookbook = Cookbook.new(cookbook_params)
-    system "echo Admin098 | sudo sh #{Script_dir}/create_cookbook.sh #{@cookbook.name} #{Repo_dir}"
-    @cookbook.path = "#{Repo_dir}/#{@cookbook.name}"
-    
+       
     respond_to do |format|
       if @cookbook.save
-        # system "echo Admin098 | sudo x-terminal-emulator -e /home/tyagi/scripts/upload_cookbook.sh #{@cookbook.name}"
-        
+         system "echo bibinmtech | sudo sh #{Script_dir}/create_cookbook.sh #{@cookbook.name} #{Repo_dir}"
+         #@cookbook.path = "#{Repo_dir}/#{@cookbook.name}"
         format.html { redirect_to @cookbook, notice: 'Cookbook was successfully created.' }
         format.json { render :show, status: :created, location: @cookbook }
       else
         format.html { redirect_to cookbooks_url, notice: 'Cookbook with same name already exists.' }
         format.json { head :no_content }
-        # format.html { render :new }
-        # format.json { render json: @cookbook.errors, status: :unprocessable_entity }
       end
     end
     
@@ -67,6 +61,7 @@ def create
     respond_to do |format|
       format.html { redirect_to cookbooks_url, notice: 'Cookbook was successfully destroyed.' }
       format.json { head :no_content }
+    
     end
   end
 

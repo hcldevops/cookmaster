@@ -27,7 +27,7 @@ a:hover,
 a:active,
 a:focus {
   outline: none;
-  text-decoration: none;
+  text-decoration: none !important;
   color: #72afd2;
 }
 /* Layouts */
@@ -79,6 +79,7 @@ body > .header {
     margin-top: 0px;
   }
   /* Left side collapse */
+
   .left-side.collapse-left {
     left: -220px;
   }

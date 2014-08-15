@@ -14,7 +14,7 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: 5
-  username: postgres
+  username: cookmaster
   password: Admin098
   port: 5432
   #socket: /var/run/mysqld/mysqld.sock

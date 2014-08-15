@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @packages = Packages.all
   end
 
   # GET /recipes/new
@@ -31,11 +32,12 @@ class RecipesController < ApplicationController
     @recipe = @cookbook.recipes.create(recipe_params)
     #raise @recipe.inspect
 
-    system "echo Admin098 | sudo chef generate recipe #{@cookbook.path} #{@recipe.name} "
-    system "echo Admin098 | sudo sh #{Script_dir}/upload_cookbook.sh #{@cookbook.name}"
+    
 
     respond_to do |format|
       if @recipe.save
+        system "echo bibinmtech | sudo chef generate recipe #{@cookbook.path} #{@recipe.name} "
+         system "echo bibinmtech | sudo sh #{Script_dir}/upload_cookbook.sh #{@cookbook.name}"
         flash[:success] = "Recipe created"
         format.html { redirect_to @cookbook, notice: 'Recipe was successfully created.' }
         # format.json { render :show, status: :created, location: @current_cookbook }

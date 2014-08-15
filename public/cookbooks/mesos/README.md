@@ -1,5 +1,5 @@
-cookmaster-1 Cookbook
-=====================
+mesos Cookbook
+==============
 TODO: Enter the cookbook description here.
 
 e.g.
@@ -11,14 +11,14 @@ TODO: List your cookbook requirements. Be sure to include any requirements this 
 
 e.g.
 #### packages
-- `toaster` - cookmaster-1 needs toaster to brown your bagel.
+- `toaster` - mesos needs toaster to brown your bagel.
 
 Attributes
 ----------
 TODO: List your cookbook attributes here.
 
 e.g.
-#### cookmaster-1::default
+#### mesos::default
 <table>
   <tr>
     <th>Key</th>
@@ -27,7 +27,7 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['cookmaster-1']['bacon']</tt></td>
+    <td><tt>['mesos']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -36,17 +36,17 @@ e.g.
 
 Usage
 -----
-#### cookmaster-1::default
+#### mesos::default
 TODO: Write usage instructions for each cookbook.
 
 e.g.
-Just include `cookmaster-1` in your node's `run_list`:
+Just include `mesos` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[cookmaster-1]"
+    "recipe[mesos]"
   ]
 }
 ```

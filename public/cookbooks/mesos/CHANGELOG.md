@@ -1,11 +1,11 @@
-cookmaster-1 CHANGELOG
-======================
+mesos CHANGELOG
+===============
 
-This file is used to list changes made in each version of the cookmaster-1 cookbook.
+This file is used to list changes made in each version of the mesos cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of cookmaster-1
+- [your_name] - Initial release of mesos
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

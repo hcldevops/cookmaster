@@ -1,11 +1,11 @@
-cookmaster-2 CHANGELOG
-======================
+apache CHANGELOG
+================
 
-This file is used to list changes made in each version of the cookmaster-2 cookbook.
+This file is used to list changes made in each version of the apache cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of cookmaster-2
+- [your_name] - Initial release of apache
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

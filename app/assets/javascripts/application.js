@@ -17,6 +17,9 @@
 //= require turbolinks
 //= require jquery.ui.accordion
 //= require jquery.ui.resizable
+//= require jquery.ui.all
+//= require dragdrop
+
 //= require_tree .
 
 //$( document ).ready(function() {
@@ -30,11 +33,16 @@ heightStyle: content
 //$( "#accordion" ).accordion( "option", "active", 1 );
 });
 
+
+
 // resizable div
 
  $(function() {
 $( "#drag").resizable({ handles: 'n' });
+
 });
+
+	
 
 
 

@@ -1,10 +1,124 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @recipe.name %>
-</p>
-<p>
-<strong>Id:</strong>
-<%= @recipe.id %></p>
+
+<section class="content-main">
+    
+
+<div class="row">
+
+<div class="col-lg-8 col-xs-8">
+   <div class="recipe-header">
+                                      
+                        <small>default.rb</small>
+                   <!-- <i class="fa fa-cog fa-2x pull-right"></i> -->
+          <div class="btn-group pull-right">
+          <button data-toggle="dropdown" class="settings-button dropdown-toggle"> <i class="fa fa-cog fa-2x"></i> </button>
+            <ul class="dropdown-menu">
+                <li><a href="">Rename</a></li>
+                <li><a href="">Delete</a></li>
+                
+            </ul>
+          </div>
+                  
+                </div>
+                            <!-- small box -->
+                            <div id="myList" class="drop-box graph-bg">
+
+                         
+
+
+
+				
+                    
+                            </div>
+                            
+ 
+</div><!-- ./col -->
+                        <div class="col-lg-4 col-xs-4 auth">
+                            <!-- small box -->
+   
+    <div id="big-form" class="well auth-box hidden">
+      <form>
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Package Attributes</legend>     
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class=" control-label" for="textinput">Package Name</label>  
+            <div class="">
+              <input id="textinput" name="textinput" placeholder="Package name" class="form-control input-md" type="text">
+              
+            </div>
+          </div>
+
+     
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class=" control-label" for="selectbasic">Source</label>
+            <div class="">
+              <select id="selectbasic" name="selectbasic" class="form-control">
+                <option value="1">local</option>
+                <option value="2">Remote</option>
+                <option value="2">Repository</option>
+              </select>
+            </div>
+          </div>
+               <!-- Select Basic -->
+          <div class="form-group">
+            <label class=" control-label" for="selectbasic">Action</label>
+            <div class="">
+              <select id="selectbasic" name="selectbasic" class="form-control">
+                <option value="1">install</option>
+                <option value="2">Update</option>
+                <option value="2">Upgrade</option>
+                <option value="2">Uninstall</option>
+              </select>
+            </div>
+          </div>
+
+                 <!-- Select Basic -->
+          <div class="form-group">
+            <label class=" control-label" for="selectbasic">Attributes</label>
+            <div class="">
+              <select id="selectbasic" name="selectbasic" class="form-control">
+                <option value="1">allow downgrade</option>
+                <option value="2">flush cache</option>
+                <option value="2">gem binary</option>
+                <option value="2">version</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Multiple Radios -->
+       
+
+          <!-- Button -->
+          
+
+          <!-- File Button --> 
+          <div class="form-group">
+            <label class=" control-label" for="filebutton">File</label>
+            <div class="">
+              <input id="filebutton" name="filebutton" class="input-file" type="file">
+            </div>
+          </div>
+
+          
+          
+          
+
+        </fieldset>
+      </form>
+    </div>
+
+                        </div><!-- ./col -->
+
+</div>               
+
+    
+
+</section>
+
+
+
 

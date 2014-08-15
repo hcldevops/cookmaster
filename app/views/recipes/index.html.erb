@@ -22,7 +22,7 @@
           <div class="btn-group">
           <button data-toggle="dropdown" class="settings-button dropdown-toggle"> <i class="fa fa-cog fa-2x"></i> </button>
             <ul class="dropdown-menu">
-                <li><%#= link_to 'View', recipe %></li>
+                <li><%#= link_to 'View' , cookbook_recipes_id_path , method: "get" %></li>
                 <li><%#= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></li>
                 
             </ul>

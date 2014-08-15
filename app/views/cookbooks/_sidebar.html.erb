@@ -10,17 +10,16 @@
                      
         <div id="accordion" class="sidebar-menu" >
         
-          <h3> Recipes <i class="fa fa-book pull-left"></i></h3>         
+          <h3> Cookbook <i class="fa fa-book pull-left"></i></h3>         
 
           <div>
           <ul>     
 
             <li class="back"><%= link_to 'Create New', '#test_modal', 'data-toggle' => 'modal' %>
             </li>
-
-            <li><%= link_to 'List' , cookbook_recipes_path(@cookbook) , method: "get" %></li>
-
-                  
+            <li><%= link_to 'List' , cookbooks_path , method: "get" %></li>
+            <li><a href="#">Upload</a></li>  
+            <li><a href="#">Download</a></li>            
           </ul>
           </div>
           <h3>Nodes<i class="fa fa-bars pull-left"></i></h3>
@@ -56,14 +55,12 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                 <h4 class="modal-title">Create A new Recipe</h4>
+                 <h4 class="modal-title">Create A new Cookbook</h4>
                
             </div>            
 
             <div class="modal-body">
-
-            <%= render :partial => 'recipes/form' %>
-
+            <%= render :partial => 'cookbooks/createcookbook' %>
             
             <div class="te"></div>
             </div>
