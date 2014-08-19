@@ -11,11 +11,21 @@ class RecipesController < ApplicationController
     @cookbook = Cookbook.find_by_id(params[:cookbook_id])
     @recipes = @cookbook.recipes.all
     
+
+    
   end
 
 
   def show
+    @div_id = params[:div_id]
     @packages = Packages.all
+    respond_to do |format|
+      format.js
+        format.html
+         #-> loads /views/cookbooks/index.js.erb
+    end
+
+ 
   end
 
  
@@ -23,7 +33,7 @@ class RecipesController < ApplicationController
     @cookbook = Cookbook.find_by_id(params[:cookbook_id])
     @recipe = @cookbook.recipes.build
   end
-
+  
   def edit
   end
 

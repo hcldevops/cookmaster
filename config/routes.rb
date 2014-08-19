@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   match "/signup", to: "users#new",  via: 'get'
   match "/dashboard" , to: "users#show" , via: 'get'
+
   
   match '/login',  to: 'sessions#new',         via: 'get'
    match '/test',  to: 'users#test',         via: 'get'

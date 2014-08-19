@@ -1,10 +1,16 @@
+.col-lg-8 {
+  padding: 0px !important;
+}
 
+.col-lg-4 {
+  padding: 0px !important;
+}
 .demo1{
 border: 2px  #2c3e50 !important;
 border-style: dashed !important;
 border-radius: 5px;
 margin: 0 20px 10px;
-background: #7f8c8d !important;
+background: #fff !important;
 padding-left: 40% !important;
 height: 45px;
 
@@ -43,17 +49,16 @@ height: 45px;
   background: black;
   border: 2px dashed #fff !important;
 }
-div.hidden
+div.toggle
 {
    display: none
 
 }
 
-#big-form
+.big-form
 {
-  background-color: #34495e;
+  background-color: #34495e !important;
 }
-
 
 .auth legend {
   color: #fff;
@@ -62,6 +67,7 @@ div.hidden
 
 .auth .well {
   border-radius: 0px;
+  margin-top: 0px;
 
 }
 

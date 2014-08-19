@@ -2,9 +2,7 @@
 
 class CookbooksController < ApplicationController
   before_action :set_cookbook, only: [:show, :edit, :update, :destroy]
-  # Script_dir = '/home/cookmaster/workspace/test/public/scripts'
-  # Repo_dir = '/home/cookmaster/workspace/test/public/cookbooks'
-  Script_dir = Rails.root.join('public' , 'scripts')
+   Script_dir = Rails.root.join('public' , 'scripts')
   Repo_dir = Rails.root.join('public' , 'cookbooks')  
 
   def index
@@ -27,7 +25,7 @@ class CookbooksController < ApplicationController
 
   @cookbook = Cookbook.find(params[:id])
   @recipes = @cookbook.recipes.all 
-   @cookbook.path = "#{Repo_dir}/#{@cookbook.name}"
+  @cookbook.path = "#{Repo_dir}/#{@cookbook.name}"
 
   	if !signed_in?
   		redirect_to root_url
